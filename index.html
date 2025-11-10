@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHub - Open Source Hotel Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🏨 StayHub</div>
+            <ul>
+                <li><a onclick="showSection('home')">Home</a></li>
+                <li><a onclick="showSection('users')">Users</a></li>
+                <li><a onclick="showSection('contributors')">Contributors</a></li>
+                <li><a onclick="showSection('about')">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <div id="home" class="content active">
+        <div class="hero">
+            <h1>StayHub</h1>
+            <p>An Open-Source Hotel Management System</p>
+            <p style="font-size: 1rem; opacity: 0.9;">Simplifying hotel operations with modern, free software</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="showSection('users')">Get Started</button>
+                <a href="https://github.com/xASM001/StayHub" class="btn btn-secondary" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+
+        <section class="container">
+            <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem;">
+                <h4 style="color: #856404; margin-bottom: 0.5rem;">📚 Educational Project</h4>
+                <p style="color: #856404;">StayHub is a learning project developed as part of <strong>ITSE476 - Free and Open-Source Software Development</strong> at the University of Bahrain. This project demonstrates best practices in open-source development, community building, and software engineering.</p>
+            </div>
+
+            <h2 class="section-title">Welcome to StayHub</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free & Open Source</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Core Features</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">GPL v3</div>
+                    <div class="stat-label">License</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">📢 Recent Announcements</h2>
+            <div class="announcement">
+                <h4>🎉 Project Launch - Phase 1</h4>
+                <p>Welcome to StayHub! We're excited to launch Phase 1 of our open-source hotel management system. This version includes core features for room management, bookings, and staff coordination. All code is available on GitHub under the GPL v3.0 license.</p>
+            </div>
+            <div class="announcement">
+                <h4>📢 Join Our Community</h4>
+                <p>We're looking for developers, designers, testers, and documentation writers to contribute to StayHub. Check out our Contributors page to learn how you can help shape the future of open-source hotel management software!</p>
+            </div>
+            <div class="announcement">
+                <h4>🚀 GitHub Repository Now Live</h4>
+                <p>Our complete source code, documentation, and development roadmap are now available on GitHub. Visit the repository to explore the codebase, report issues, or start contributing to the project.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">✨ Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🛏️ Room Management</h3>
+                    <p>Efficiently manage room inventory, track status in real-time, schedule maintenance, and organize housekeeping tasks.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📅 Booking System</h3>
+                    <p>Handle reservations with ease. Manage check-ins, modifications, cancellations, and availability calendars.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Guest Management</h3>
+                    <p>Store and manage comprehensive guest profiles, contact information, booking history, and preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👔 Staff Management</h3>
+                    <p>Organize staff schedules, assign tasks, manage roles and departments, and track staff performance.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Billing & Payments</h3>
+                    <p>Automated invoice generation, multiple payment methods, and comprehensive financial tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Reports & Analytics</h3>
+                    <p>Generate comprehensive reports on occupancy, revenue, guest satisfaction, and operational metrics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">Why Choose StayHub?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>💚 Completely Free</h3>
+                    <p>No licensing fees, no hidden costs. StayHub is free forever under the GPL v3.0 license.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔓 Fully Open Source</h3>
+                    <p>Complete access to source code. Customize it to your needs without restrictions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Your Data, Your Control</h3>
+                    <p>No vendor lock-in. You own your data and host it on your own servers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Community Driven</h3>
+                    <p>Built by a passionate community. Contribute ideas, code, and improvements.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- USERS SECTION -->
+    <div id="users" class="content">
+        <section class="container">
+            <h2 class="section-title">👥 For Users</h2>
+
+            <div class="info-section">
+                <h3>📥 Download & Installation</h3>
+                <p>Get started with StayHub in just a few steps:</p>
+                <div class="links">
+                    <button class="link-btn" onclick="openModal('download-modal')">Download Latest Version</button>
+                    <button class="link-btn" onclick="openModal('install-modal')">Installation Guide</button>
+                    <button class="link-btn" onclick="openModal('requirements-modal')">System Requirements</button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>📚 Documentation & Resources</h3>
+                <p>Access comprehensive guides and tutorials:</p>
+                <div class="list-item">📖 User Manual - Complete guide to using StayHub</div>
+                <div class="list-item">🎥 Video Tutorials - Step-by-step video walkthroughs</div>
+                <div class="list-item">📱 API Documentation - For developers and integrations</div>
+                <div class="list-item">⚙️ Configuration Guide - Setup and customization</div>
+                <div class="list-item">🛠️ Troubleshooting - Common issues and solutions</div>
+            </div>
+
+            <div class="info-section">
+                <h3>📣 Latest Updates & Announcements</h3>
+                <div class="announcement" style="background: #fff3cd; border-left-color: #ffc107;">
+                    <h4>Version 1.0.0 Released</h4>
+                    <p>Core features including room management, booking system, guest tracking, and basic reporting now available!</p>
+                </div>
+                <div class="announcement" style="background: #d1ecf1; border-left-color: #17a2b8;">
+                    <h4>Coming Soon: Mobile Application</h4>
+                    <p>iOS and Android mobile apps to manage your hotel on the go. Expected in Phase 2.</p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>🐛 Report Issues & Feedback</h3>
+                <p>Found a bug or have a suggestion? We'd love to hear from you:</p>
+                <div class="links">
+                    <a href="https://github.com/xASM001/StayHub/issues" class="link-btn" target="_blank">🐛 Issue Tracker</a>
+                    <a href="https://github.com/xASM001/StayHub/issues?q=label:enhancement" class="link-btn" target="_blank">💡 Feature Requests</a>
+                    <a href="mailto:abdullah.s.mohammed51@gmail.com?subject=StayHub Support" class="link-btn" target="_blank">📧 Contact Support</a>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>❓ Frequently Asked Questions</h3>
+                
+                <div style="margin-top: 1.5rem;">
+                    <p><strong>Q: Is StayHub really free?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: Yes! StayHub is released under the GNU General Public License v3.0. You can use, modify, and distribute it freely without any licensing fees.</p>
+                    
+                    <p><strong>Q: What are the minimum system requirements?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: Minimum 4GB RAM, 100GB storage, Windows/Linux/macOS. A database server (MySQL or PostgreSQL) is required. See System Requirements for details.</p>
+                    
+                    <p><strong>Q: Does it support multiple properties?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: Phase 1 supports single property management. Multi-property support for hotel chains is planned for Phase 2.</p>
+                    
+                    <p><strong>Q: Can I use this for my commercial hotel?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: Absolutely! GPL v3.0 permits commercial use. You can run it as-is or customize it for your business needs.</p>
+
+                    <p><strong>Q: How often are updates released?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: We release monthly updates with bug fixes and minor features. Major releases happen quarterly with significant new functionality.</p>
+                    
+                    <p><strong>Q: Do you offer technical support?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: Yes! Check our documentation, visit the community forum, search GitHub issues, or contact us at abdullah.s.mohammed51@gmail.com.</p>
+
+                    <p><strong>Q: Can I contribute to the project?</strong></p>
+                    <p style="margin-bottom: 1.5rem; color: #666;">A: Absolutely! We welcome contributions from developers, designers, and documentation writers. See the Contributors page for guidelines.</p>
+
+                    <p><strong>Q: Is my data secure?</strong></p>
+                    <p style="color: #666;">A: StayHub uses industry-standard security practices. Since you control the server, your data never leaves your infrastructure. See our Security documentation for details.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTRIBUTORS SECTION -->
+    <div id="contributors" class="content">
+        <section class="container">
+            <h2 class="section-title">👨‍💻 For Contributors & Developers</h2>
+
+            <div class="info-section">
+                <h3>🚀 Getting Started</h3>
+                <p>Want to contribute to StayHub? Here's how to get started:</p>
+                <ol style="margin-left: 2rem; margin-top: 1rem;">
+                    <li style="margin: 0.8rem 0;">Fork the repository on GitHub</li>
+                    <li style="margin: 0.8rem 0;">Clone your fork to your local machine</li>
+                    <li style="margin: 0.8rem 0;">Create a feature branch for your changes</li>
+                    <li style="margin: 0.8rem 0;">Follow our coding standards and guidelines</li>
+                    <li style="margin: 0.8rem 0;">Make your changes and write tests</li>
+                    <li style="margin: 0.8rem 0;">Submit a pull request with a clear description</li>
+                    <li style="margin: 0.8rem 0;">Respond to code review feedback</li>
+                </ol>
+            </div>
+
+            <div class="info-section">
+                <h3>💬 Community & Discussion Forums</h3>
+                <p>Join our vibrant community:</p>
+                <div class="links">
+                    <a href="https://github.com/xASM001/StayHub/discussions" class="link-btn" target="_blank">GitHub Discussions</a>
+                    <a href="https://github.com/xASM001/StayHub/discussions/categories/general" class="link-btn" target="_blank">Community Forum</a>
+                    <a href="https://discord.com" class="link-btn" target="_blank">Discord Server</a>
+                    <a href="https://groups.google.com/forum/#!forum/stayhub-discussions" class="link-btn" target="_blank">Mailing List</a>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>📋 Code of Conduct</h3>
+                <p>We are committed to providing a welcoming and inclusive environment for all contributors.</p>
+                
+                <h4 style="color: #667eea; margin-top: 1.5rem; margin-bottom: 0.5rem;">Expected Behavior:</h4>
+                <div class="list-item">Be respectful and professional in all interactions</div>
+                <div class="list-item">Provide constructive feedback and criticism</div>
+                <div class="list-item">Welcome diverse perspectives and backgrounds</div>
+                <div class="list-item">Give credit to others' work and contributions</div>
+                <div class="list-item">Respect confidentiality and privacy</div>
+
+                <h4 style="color: #667eea; margin-top: 1.5rem; margin-bottom: 0.5rem;">Unacceptable Behavior:</h4>
+                <div class="list-item" style="color: #d32f2f;">Harassment, discrimination, or abusive language</div>
+                <div class="list-item" style="color: #d32f2f;">Personal attacks or insulting comments</div>
+                <div class="list-item" style="color: #d32f2f;">Unwanted attention or advances</div>
+                <div class="list-item" style="color: #d32f2f;">Publishing private information without consent</div>
+
+                <div class="links" style="margin-top: 1.5rem;">
+                    <button class="link-btn" onclick="openModal('coc-modal')">Read Full Code of Conduct</button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>🔧 Development Guidelines</h3>
+                
+                <h4 style="color: #667eea; margin-top: 1rem; margin-bottom: 0.8rem;">Coding Standards:</h4>
+                <div class="list-item">Use consistent indentation (4 spaces)</div>
+                <div class="list-item">Follow language-specific style guides</div>
+                <div class="list-item">Write meaningful variable and function names</div>
+                <div class="list-item">Add comments for complex logic</div>
+                <div class="list-item">Keep functions small and focused</div>
+
+                <h4 style="color: #667eea; margin-top: 1rem; margin-bottom: 0.8rem;">Git Workflow:</h4>
+                <div class="code-block">
+git checkout -b feature/your-feature-name
+git add .
+git commit -m "Clear description of changes"
+git push origin feature/your-feature-name
+                </div>
+
+                <h4 style="color: #667eea; margin-top: 1rem; margin-bottom: 0.8rem;">Pull Request Requirements:</h4>
+                <div class="list-item">Reference related issues with #issue-number</div>
+                <div class="list-item">Include detailed description of changes</div>
+                <div class="list-item">Add or update tests for new features</div>
+                <div class="list-item">Update documentation if needed</div>
+                <div class="list-item">Ensure all tests pass</div>
+                <div class="list-item">Maintain minimum 80% code coverage</div>
+            </div>
+
+            <div class="info-section">
+                <h3>🔗 GitHub Repository</h3>
+                <p>Access the source code and development resources:</p>
+                <div class="links">
+                    <a href="https://github.com/xASM001/StayHub" class="link-btn" target="_blank">View on GitHub</a>
+                    <button class="link-btn" onclick="openModal('arch-modal')">Architecture Documentation</button>
+                    <button class="link-btn" onclick="openModal('setup-modal')">Development Setup</button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>📚 Developer Documentation</h3>
+                <div class="list-item"><strong>Architecture Overview</strong> - System design, structure, and components</div>
+                <div class="list-item"><strong>API Reference</strong> - Complete endpoint documentation with examples</div>
+                <div class="list-item"><strong>Database Schema</strong> - Entity relationships and design decisions</div>
+                <div class="list-item"><strong>Setup Guide</strong> - Development environment configuration</div>
+                <div class="list-item"><strong>Testing Guide</strong> - Unit and integration testing procedures</div>
+                <div class="list-item"><strong>Deployment Guide</strong> - Production deployment procedures</div>
+            </div>
+
+            <div class="info-section">
+                <h3>✨ Current Development Tasks</h3>
+                <div class="list-item"><strong>Backend Development:</strong> REST API endpoints, database optimization, business logic</div>
+                <div class="list-item"><strong>Frontend Development:</strong> UI components, dashboards, responsive design</div>
+                <div class="list-item"><strong>Quality Assurance:</strong> Unit tests, integration tests, bug reporting</div>
+                <div class="list-item"><strong>Documentation:</strong> User guides, API docs, code documentation</div>
+                <div class="list-item"><strong>DevOps:</strong> CI/CD pipelines, deployment automation, infrastructure</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div id="about" class="content">
+        <section class="container">
+            <h2 class="section-title">ℹ️ About StayHub</h2>
+
+            <div class="info-section">
+                <h3>Project Information</h3>
+                <table class="requirement-table">
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Project Name</td>
+                        <td>StayHub - Open Source Hotel Management System</td>
+                    </tr>
+                    <tr>
+                        <td>Current Version</td>
+                        <td>1.0.0</td>
+                    </tr>
+                    <tr>
+                        <td>License</td>
+                        <td>GNU General Public License v3.0</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>Active Development (Phase 1)</td>
+                    </tr>
+                    <tr>
+                        <td>Organization</td>
+                        <td>University of Bahrain - Department of Computer Science</td>
+                    </tr>
+                    <tr>
+                        <td>Course</td>
+                        <td>ITSE476 - Free and Open-Source Software Development</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="info-section">
+                <h3>Mission & Vision</h3>
+                <p><strong>Mission:</strong> To provide a free, open-source, and customizable hotel management system that empowers hospitality businesses of all sizes to streamline their operations without vendor lock-in or licensing constraints.</p>
+                <p style="margin-top: 1rem;"><strong>Vision:</strong> To become the leading open-source solution for hotel management, trusted by thousands of properties worldwide, with a thriving community of contributors continuously improving the platform.</p>
+            </div>
+
+            <div class="info-section">
+                <h3>Why Open Source?</h3>
+                <p>We believe hotel management software should be accessible, transparent, and community-driven. By making StayHub open source, we enable hoteliers to:</p>
+                <div class="list-item">💚 Reduce operational costs with free, quality software</div>
+                <div class="list-item">🔧 Customize the system to their specific needs and workflows</div>
+                <div class="list-item">🛡️ Benefit from community improvements and security updates</div>
+                <div class="list-item">🔓 Avoid vendor lock-in with proprietary solutions</div>
+                <div class="list-item">🤝 Contribute improvements back to the community</div>
+                <div class="list-item">📊 Have full transparency into how their data is managed</div>
+            </div>
+
+            <div class="info-section">
+                <h3>Development Roadmap</h3>
+                
+                <h4 style="color: #667eea; margin-bottom: 1rem;">Phase 1 (Current - November 2025)</h4>
+                <div class="list-item">✅ Core room management system</div>
+                <div class="list-item">✅ Booking and reservation system</div>
+                <div class="list-item">✅ Guest information management</div>
+                <div class="list-item">✅ Staff coordination tools</div>
+                <div class="list-item">✅ Basic billing and payments</div>
+                <div class="list-item">✅ Occupancy and revenue reports</div>
+            </div>
+
+            <div class="info-section">
+                <h3>Contact & Support</h3>
+                <p style="margin-bottom: 1rem;"><strong>Email:</strong> <a href="mailto:abdullah.s.mohammed51@gmail.com" style="color: #667eea; text-decoration: none;">abdullah.s.mohammed51@gmail.com</a></p>
+                <p style="margin-bottom: 1rem;"><strong>GitHub Issues:</strong> <a href="https://github.com/xASM001/StayHub/issues" style="color: #667eea; text-decoration: none;" target="_blank">Report bugs and request features</a></p>
+                <p style="margin-bottom: 1rem;"><strong>GitHub Discussions:</strong> <a href="https://github.com/xASM001/StayHub/discussions" style="color: #667eea; text-decoration: none;" target="_blank">Join discussions and get help</a></p>
+                <p><strong>Discord:</strong> <a href="https://discord.com" style="color: #667eea; text-decoration: none;" target="_blank">Real-time chat with community members</a></p>
+            </div>
+
+            <div class="info-section">
+                <h3>Technology Stack</h3>
+                <table class="requirement-table">
+                    <tr>
+                        <th>Component</th>
+                        <th>Technology</th>
+                    </tr>
+                    <tr>
+                        <td>Backend Framework</td>
+                        <td>Spring Boot (Java)</td>
+                    </tr>
+                    <tr>
+                        <td>Database</td>
+                        <td>MySQL / PostgreSQL</td>
+                    </tr>
+                    <tr>
+                        <td>ORM</td>
+                        <td>Hibernate / JPA</td>
+                    </tr>
+                    <tr>
+                        <td>Frontend</td>
+                        <td>HTML5, CSS3, JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>API Architecture</td>
+                        <td>RESTful Web Services</td>
+                    </tr>
+                    <tr>
+                        <td>Deployment</td>
+                        <td>Docker, Linux Servers</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- MODALS -->
+    <div id="download-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('download-modal')">&times;</span>
+            <h2>Download StayHub</h2>
+            <p style="margin-top: 1rem;">Choose your preferred download option:</p>
+            
+            <h4 style="color: #667eea; margin-top: 1.5rem;">Latest Release</h4>
+            <p><strong>Version 1.0.0</strong> - November 2025</p>
+            <p>Complete hotel management system with core features.</p>
+            <a href="https://github.com/xASM001/StayHub/releases" class="link-btn" style="margin-top: 0.5rem;" target="_blank">Download (v1.0.0)</a>
+
+            <h4 style="color: #667eea; margin-top: 1.5rem;">Installation Options</h4>
+            <div class="list-item">Standalone Application (Windows, Mac, Linux)</div>
+            <div class="list-item">Docker Container (Recommended for servers)</div>
+            <div class="list-item">Source Code (For developers)</div>
+
+            <h4 style="color: #667eea; margin-top: 1.5rem;">System Requirements</h4>
+            <div class="list-item">RAM: Minimum 4GB, Recommended 8GB+</div>
+            <div class="list-item">Storage: 100GB+ for data</div>
+            <div class="list-item">Database: MySQL 5.7+ or PostgreSQL 10+</div>
+            <div class="list-item">OS: Windows 10+, macOS 10.14+, Ubuntu 18.04+</div>
+
+            <p style="margin-top: 1.5rem; color: #666;"><small>All downloads are provided under the GPL v3.0 license. No registration required.</small></p>
+        </div>
+    </div>
+
+    <div id="install-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('install-modal')">&times;</span>
+            <h2>Installation Guide</h2>
+            
+            <h4 style="color: #667eea; margin-top: 1rem;">Quick Start (5 minutes)</h4>
+            <ol style="margin-left: 2rem; margin-top: 0.5rem;">
+                <li>Download the latest release</li>
+                <li>Extract the files to your desired location</li>
+                <li>Set up MySQL database using provided schema</li>
+                <li>Configure database connection in settings</li>
+                <li>Start the application and login</li>
+            </ol>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Detailed Installation</h4>
+            <p style="margin-top: 0.5rem;">For complete step-by-step installation instructions, please refer to our comprehensive Installation Guide in the documentation.</p>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Docker Installation</h4>
+            <div class="code-block">
+docker pull xasm001/stayhub:latest
+docker run -d -p 8080:8080 xasm001/stayhub:latest
+            </div>
+
+            <p style="margin-top: 1rem; color: #666;"><small>Docker is the recommended method for production deployments.</small></p>
+        </div>
+    </div>
+
+    <div id="requirements-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('requirements-modal')">&times;</span>
+            <h2>System Requirements</h2>
+            
+            <h4 style="color: #667eea; margin-top: 1rem;">Minimum Requirements</h4>
+            <table class="requirement-table">
+                <tr>
+                    <th>Component</th>
+                    <th>Minimum</th>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>4 GB</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>100 GB</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>2 Cores</td>
+                </tr>
+                <tr>
+                    <td>Processor Speed</td>
+                    <td>2.0 GHz</td>
+                </tr>
+            </table>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Recommended Requirements</h4>
+            <table class="requirement-table">
+                <tr>
+                    <th>Component</th>
+                    <th>Recommended</th>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>8 GB or more</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>500 GB SSD</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>4+ Cores</td>
+                </tr>
+                <tr>
+                    <td>Processor Speed</td>
+                    <td>2.4 GHz or higher</td>
+                </tr>
+            </table>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Software Requirements</h4>
+            <div class="list-item">Java Runtime Environment (JRE) 11 or higher</div>
+            <div class="list-item">MySQL 5.7+ or PostgreSQL 10+</div>
+            <div class="list-item">Web Browser (Chrome 90+, Firefox 88+, Safari 14+)</div>
+            <div
