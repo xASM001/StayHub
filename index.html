@@ -270,6 +270,7 @@ git checkout -b feature/your-feature-name
 git add .
 git commit -m "Clear description of changes"
 git push origin feature/your-feature-name
+# Then submit a Pull Request
                 </div>
 
                 <h4 style="color: #667eea; margin-top: 1rem; margin-bottom: 0.8rem;">Pull Request Requirements:</h4>
@@ -535,4 +536,111 @@ docker run -d -p 8080:8080 xasm001/stayhub:latest
             <div class="list-item">Java Runtime Environment (JRE) 11 or higher</div>
             <div class="list-item">MySQL 5.7+ or PostgreSQL 10+</div>
             <div class="list-item">Web Browser (Chrome 90+, Firefox 88+, Safari 14+)</div>
-            <div
+            <div class="list-item">Internet connection for initial setup and updates</div>
+        </div>
+    </div>
+
+    <div id="coc-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('coc-modal')">&times;</span>
+            <h2>Code of Conduct</h2>
+            
+            <h4 style="color: #667eea; margin-top: 1rem;">Our Commitment</h4>
+            <p>We are committed to providing a welcoming, inclusive, and respectful environment for all contributors and community members, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, sexual identity and orientation.</p>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Expected Behavior</h4>
+            <div class="list-item">Use welcoming and inclusive language</div>
+            <div class="list-item">Be respectful of differing opinions, viewpoints, and experiences</div>
+            <div class="list-item">Accept constructive criticism gracefully</div>
+            <div class="list-item">Give credit to others' contributions</div>
+            <div class="list-item">Focus on what is best for the community</div>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Unacceptable Behavior</h4>
+            <div class="list-item" style="color: #d32f2f;">Harassment or discrimination in any form</div>
+            <div class="list-item" style="color: #d32f2f;">Personal attacks or insulting comments</div>
+            <div class="list-item" style="color: #d32f2f;">Publishing private information without consent</div>
+            <div class="list-item" style="color: #d32f2f;">Unwanted sexual attention or advances</div>
+            <div class="list-item" style="color: #d32f2f;">Other conduct that could reasonably be considered inappropriate</div>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Reporting</h4>
+            <p>Instances of abusive, harassing, or otherwise unacceptable behavior can be reported by contacting the project team at abdullah.s.mohammed51@gmail.com or through GitHub's reporting features. All complaints will be reviewed and investigated promptly.</p>
+        </div>
+    </div>
+
+    <div id="arch-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('arch-modal')">&times;</span>
+            <h2>Architecture Documentation</h2>
+            
+            <h4 style="color: #667eea; margin-top: 1rem;">System Architecture</h4>
+            <p>StayHub follows a three-tier architecture pattern:</p>
+            
+            <p style="margin-top: 1rem;"><strong>Presentation Layer:</strong> Web-based UI built with HTML5, CSS3, and JavaScript. Provides intuitive interfaces for managers, receptionists, and staff.</p>
+            
+            <p><strong>Business Logic Layer:</strong> Spring Boot backend with RESTful API endpoints. Handles all business rules, validations, and data processing.</p>
+            
+            <p><strong>Data Layer:</strong> Relational database (MySQL/PostgreSQL) with proper indexing and relationships. Ensures data integrity and performance.</p>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Key Components</h4>
+            <div class="list-item"><strong>Controllers:</strong> Handle HTTP requests and route them appropriately</div>
+            <div class="list-item"><strong>Services:</strong> Contain business logic and coordinate between layers</div>
+            <div class="list-item"><strong>Repositories:</strong> Manage database operations using JPA</div>
+            <div class="list-item"><strong>Entities:</strong> Define data models and relationships</div>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Security</h4>
+            <div class="list-item">Role-based access control (RBAC)</div>
+            <div class="list-item">Password encryption and hashing</div>
+            <div class="list-item">SQL injection prevention through parameterized queries</div>
+            <div class="list-item">HTTPS support for secure communications</div>
+        </div>
+    </div>
+
+    <div id="setup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('setup-modal')">&times;</span>
+            <h2>Development Setup</h2>
+            
+            <h4 style="color: #667eea; margin-top: 1rem;">Prerequisites</h4>
+            <div class="list-item">Java Development Kit (JDK) 11 or higher</div>
+            <div class="list-item">Maven 3.6+ for dependency management</div>
+            <div class="list-item">MySQL Server 5.7 or PostgreSQL 10+</div>
+            <div class="list-item">Git for version control</div>
+            <div class="list-item">IDE: IntelliJ IDEA or VS Code</div>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Setup Steps</h4>
+            <ol style="margin-left: 2rem; margin-top: 0.5rem;">
+                <li>Clone the repository: <code>git clone https://github.com/xASM001/StayHub.git</code></li>
+                <li>Navigate to project: <code>cd StayHub/backend</code></li>
+                <li>Install dependencies: <code>mvn install</code></li>
+                <li>Create database: <code>CREATE DATABASE stayhub_db;</code></li>
+                <li>Configure database in application.properties</li>
+                <li>Run tests: <code>mvn test</code></li>
+                <li>Start application: <code>mvn spring-boot:run</code></li>
+            </ol>
+
+            <h4 style="color: #667eea; margin-top: 1rem;">Testing</h4>
+            <p>Run unit tests with: <code>mvn test</code></p>
+            <p>Run integration tests with: <code>mvn verify</code></p>
+            <p>Generate coverage report: <code>mvn jacoco:report</code></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a onclick="showSection('home')">Home</a>
+                <a onclick="showSection('users')">For Users</a>
+                <a onclick="showSection('contributors')">For Contributors</a>
+                <a onclick="showSection('about')">About</a>
+                <a href="https://github.com/xASM001/StayHub" target="_blank">GitHub</a>
+                <a href="mailto:abdullah.s.mohammed51@gmail.com">Contact</a>
+            </div>
+            <p>&copy; 2025 StayHub - Open Source Hotel Management System</p>
+            <p>Licensed under GNU General Public License v3.0</p>
+            <p>University of Bahrain - ITSE476 - Free and Open-Source Software Development</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
